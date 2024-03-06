@@ -1,0 +1,31 @@
+<%- include("../shared/_header") %>
+
+<div class="container mt-5" style="background-color: #ffcc00; padding: 20px;">
+    <h1 style="color: #990000;">
+        <%= formType === "create" ? "Create New Card" : "Update Card" %>
+    </h1>
+
+    <hr class="my-5" style="border-color: #990000;">
+
+    <%- include("./_form") %>
+
+    <a href="/cards" class="back-to-cards-btn">Back to cards</a>
+</div>
+
+<style>
+    .back-to-cards-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #990000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .back-to-cards-btn:hover {
+        background-color: #ff0000;
+    }
+</style>
+
+<%- include("../shared/_footer") %>

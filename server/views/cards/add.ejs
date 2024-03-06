@@ -1,0 +1,15 @@
+<%- include("../shared/_header") %>
+
+<div class="container mt-5" style="background-color: #ffe6b3; padding: 20px; border-radius: 10px;">
+    <h1 style="color: #ff6666;">
+        <%= formType === "create" ? "Create New Card" : "Update Card" %>
+    </h1>
+
+    <hr class="my-5" style="background-color: #ff6666;">
+
+    <%- include("./_form") %>
+
+    <a href="/cards" style="color: #ff6666; text-decoration: none;" class="button">Back to cards</a>
+</div>
+
+<%- include("../shared/_footer") %>

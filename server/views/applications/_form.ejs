@@ -1,0 +1,22 @@
+<%
+    let action = "";
+    let name = "";
+    let method = "post";
+
+    if (typeof application !== "undefined") {
+        action = `/${application.id}`;
+        name = application.name;
+        method = "put";
+    }
+%>
+
+<form action="/applications<%= action %>" method="post" class="mt-3" style="background-color: #ffd700; padding: 20px; border-radius: 10px;">
+    <input type="hidden" name="_method" value="<%= method %>">
+
+    <div class="mb-3">
+        <label for="name" class="form-label" style="color: #ff1493;">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required value="<%= name %>" style="border-color: #ff1493;">
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="background-color: #ff69b4; border-color: #ff69b4;">Submit</button>
+</form>
